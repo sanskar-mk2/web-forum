@@ -8,6 +8,20 @@ module.exports = {
         "./resources/views/**/*.blade.php",
     ],
 
+    daisyui: {
+        themes: [
+            {
+                light: {
+                    ...require("daisyui/src/colors/themes")[
+                        "[data-theme=light]"
+                    ],
+                    primary: "#EF3B2D",
+                    "primary-focus": "#FF3C2F",
+                },
+            },
+        ],
+    },
+
     theme: {
         extend: {
             fontFamily: {

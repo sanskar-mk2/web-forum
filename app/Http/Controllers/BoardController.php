@@ -13,7 +13,7 @@ class BoardController extends Controller
      */
     public function index()
     {
-        return view('boards.index');
+        return view('boards.index')->with('boards', \App\Models\Board::all());
     }
 
     /**
@@ -34,7 +34,20 @@ class BoardController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'name' => 'required|string|max:20|unique:boards',
+            'description' => 'required|min:10|max:240',
+            'banner' => 'required|image',
+        ]);
+
+        $board = new \App\Models\Board();
+        $board->name = $request->name;
+        $board->description = $request->description;
+        $board->banner = $request->file('banner')->store('banners', 'public');
+        $board->save();
+
+        session()->flash('success', 'Board created successfully.');
+        return redirect()->route('boards.index');
     }
 
     /**
@@ -45,7 +58,7 @@ class BoardController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('boards.show')->with('board', \App\Models\Board::find($id));
     }
 
     /**

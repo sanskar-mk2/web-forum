@@ -10,6 +10,8 @@
 
 `exit`
 
+`php artisan storage:link`
+
 #### Edit .env file
 
 `git init`
@@ -32,3 +34,5 @@
 - `composer require livewire/livewire`
 - `php artisan migrate`
 - `php artisan serve`
+
+- `npm install uniqolor`
