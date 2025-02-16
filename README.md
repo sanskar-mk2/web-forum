@@ -1,38 +1,39 @@
-`composer create-project laravel/laravel web-forum`
+# Web Forum
+Laravel based imageboard for submission as mini-project in the 3rd semester of M.S. program.
 
-`cd .\web-forum\`
+## Development Environment
 
-`code .`
+-   Windows 10 Pro N x86_64
+-   PHP 8.1.4
+-   MariaDB 10.4.25
+-   Apache Webserver
 
-`mysql -u sanskar -p`
+## Production Environment
 
-`create database web_forum;`
+-   Debian GNU/Linux 11 (bullseye) x86_64
+-   PHP 8.1.8
+-   MariaDB 10.5.15
+-   Nginx Webserver
 
-`exit`
+## Frameworks
 
-`php artisan storage:link`
+-   Laravel Framework 9.30.0
+-   Tailwind CSS 3.1.8
 
-#### Edit .env file
+## Methodoligies Used
 
-`git init`
+-   Test Driven Development
+-   Agile Developments
 
-`git add .`
+## Modules
 
-`git commit -m "Initial commit"`
+-   Authentication
+-   Board Management
+-   Thread Management
 
-## Add node and composer dependencies
-- `composer require laravel/breeze --dev`
-- `php artisan breeze:install`
-- `npm install`
-- `npm install -D @tailwindcss/typography`
-- `npm i daisyui`
-- Edit `tailwind.config.js` to include `require('@tailwindcss/typography')` and `require('daisyui')`
-- `composer require filament/filament`
-- Update `composer.json`
-- `composer require spatie/laravel-permission`
-- `php artisan vendor:publish --provider="Spatie\Permission\PermissionServiceProvider"`
-- `composer require livewire/livewire`
-- `php artisan migrate`
-- `php artisan serve`
+## Models
 
-- `npm install uniqolor`
+-   User
+-   Board
+-   Thread
+-   Post
