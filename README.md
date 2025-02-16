@@ -1,7 +1,7 @@
 # Web Forum
 Laravel based imageboard for submission as mini-project in the 3rd semester of M.S. program.
 
-[Thesis Report PDF](https://github.com/sanskar-mk2/web-forum/blob/master/First%20Year%20Thesis%20Msc.pdf)
+[Thesis Report PDF](https://github.com/sanskar-mk2/web-forum/blob/master/Thesis%20Report.pdf)
 
 ## Development Environment
 
